@@ -9,4 +9,6 @@ def binary_to_decimal(binary):
         power += 1 #increase power by 1    
     return decimal 
 
-print(binary_to_decimal(100010100010))
+print("Enter the binary number:")
+x = int(input())
+print(binary_to_decimal(x))
