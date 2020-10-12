@@ -1,0 +1,28 @@
+# Python problem to find missing element in an array.
+def findMissingElement(nums, n):
+    sum1 = 0
+    sum2 = 0
+    for i in range(0, n-1):
+        sum1 = sum1 + nums[i]
+    sum2 = int(n*(n+1)/2)
+    return sum2-sum1
+
+
+n = int(input("Enter the total number of elements\n"))
+print('Enter a list of '+str(n) + ' number in a single line')
+arr = list(map(int, input().split()))
+
+result = findMissingElement(arr, n)
+print("Missing element is", result)
+
+'''        
+Time complexity ==> O(n)
+Space complexity=> O(1)
+I/O -->
+Enter the total number of elements
+10
+Enter a list of 10 number in a single line
+1 3 4 5 6 7 8 9 10
+O/P -->
+Majority element is 2
+'''
